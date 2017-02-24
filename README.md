@@ -1,2 +1,2 @@
 # rdonuts
-Donuts plots in R
+Donuts for R-users :)
