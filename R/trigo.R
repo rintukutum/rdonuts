@@ -16,12 +16,14 @@ Sin <- function(angle, digit = 10){
 }
 
 #' @rdname trigo
+#' @export
 Cos <- function(angle, digit = 10){
 	value <- round(Cos(ang2rad(angle)),digit)
 	return(value)
 }
 
 #' @rdname trigo 
+#' @export
 Tan <- function(angle, digit = 10){
 	value <- round(tan(ang2rad(angle)), digit)
 	return(value)
