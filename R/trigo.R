@@ -2,7 +2,6 @@
 #'
 #' Use angle as input instead of radian, Sin, Cos, Tan
 #' @name trigo
-#' @aliases Sin, Cos, Tan
 #' @param angle Angle \code{angle}
 #' @param digit Digit, default is 10 \code{digit}
 #' @export

@@ -3,9 +3,6 @@
 \name{trigo}
 \alias{trigo}
 \alias{Sin}
-\alias{Sin,}
-\alias{Cos,}
-\alias{Tan}
 \title{Trigonometric functions}
 \usage{
 Sin(angle, digit = 10)
