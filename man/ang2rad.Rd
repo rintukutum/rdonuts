@@ -15,3 +15,7 @@ radian
 \description{
 Convert angle to radian
 }
+\examples{
+angles <- 0:180
+radian <- ang2rad(angle = angles)
+}
