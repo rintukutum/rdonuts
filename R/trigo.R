@@ -18,7 +18,7 @@ Sin <- function(angle, digit = 10){
 #' @rdname trigo
 #' @export
 Cos <- function(angle, digit = 10){
-	value <- round(Cos(ang2rad(angle)),digit)
+	value <- round(cos(ang2rad(angle)),digit)
 	return(value)
 }
 
