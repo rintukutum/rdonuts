@@ -29,10 +29,13 @@ boxplot(xg, col = "lavender", notch = TRUE, varwidth = TRUE)
 ```
        
     + [findInterval](https://stat.ethz.ch/R-manual/R-devel/library/base/html/findInterval.html) : Find Interval Numbers or Indices. 
+
 ```{r}
 x <- 2:18
 v <- c(5, 10, 15) # create two bins [5,10) and [10,15)
 findInterval(x, v)
 # [1] 0 0 0 1 1 1 1 1 2 2 2 2 2 3 3 3 3
 ```
+
+
 
