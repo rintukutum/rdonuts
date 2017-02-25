@@ -28,7 +28,7 @@ xg <- split(x, g)
 boxplot(xg, col = "lavender", notch = TRUE, varwidth = TRUE)
 ```
        
-    + [findInterval](https://stat.ethz.ch/R-manual/R-devel/library/base/html/findInterval.html) : Find Interval Numbers or Indices. 
+    +   [findInterval](https://stat.ethz.ch/R-manual/R-devel/library/base/html/findInterval.html) : Find Interval Numbers or Indices. 
 
 ```{r}
 x <- 2:18
