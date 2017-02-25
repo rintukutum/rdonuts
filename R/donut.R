@@ -11,7 +11,7 @@ donut <- function(
 	# check variable names
 	var_check <- intersect(
 		.var,
-		colnames(.var)
+		colnames(.data)
 	)
 	if(length(var_check) == 0){
 		err_msg <- paste0(
@@ -21,12 +21,13 @@ donut <- function(
 			)
 		stop(err_msg)
 	}
+	#--------
+	# select specified variables
 	.data <- .data[,.var]
 	if(length(.var) == 1){
-		prop <- prop.table(table(.data))
+		prop <- get_prop(.data)
+		return(prop)
 	}else{
-
+		
 	}
-	
-
 }

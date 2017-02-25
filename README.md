@@ -14,3 +14,26 @@ Donuts for R-users :)
 -------------
 This package is not a wRapper for D3. It provide useRs to create
 donuts in existing gRphical space (plot aRea).
+
+# Additional resources
+-------------
+- usefull r-base functions
+    +   [split](https://stat.ethz.ch/R-manual/R-devel/library/base/html/split.html) : Divide into Groups and Reassemble
+        *   exmaple:
+```{r}
+require(stats); require(graphics)
+n <- 10; nn <- 100
+g <- factor(round(n * runif(n * nn)))
+x <- rnorm(n * nn) + sqrt(as.numeric(g))
+xg <- split(x, g)
+boxplot(xg, col = "lavender", notch = TRUE, varwidth = TRUE)
+```
+    +   findInterval[https://stat.ethz.ch/R-manual/R-devel/library/base/html/findInterval.html] : Find Interval Numbers or Indices
+        *   example:
+```{r}
+x <- 2:18
+v <- c(5, 10, 15) # create two bins [5,10) and [10,15)
+findInterval(x, v)
+# [1] 0 0 0 1 1 1 1 1 2 2 2 2 2 3 3 3 3
+```
+
