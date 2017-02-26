@@ -26,7 +26,22 @@ donut <- function(
 	.data <- .data[,.var]
 	if(length(.var) == 1){
 		prop <- get_prop(.data)
-		return(prop)
+		angs <- prop2ang(prop)
+		plot(
+			10:-10,
+			10:-10,
+			type='n')
+		cols <- as.factor(names(angs))
+		for(i in 1:length(angs)){
+			draw_arc(
+					x = 1,
+					y = 1,
+					s.ang = angs[[i]][1],
+					e.ang = angs[[i]][2],
+					stroke = cols[i]
+			)
+		}	
+		return(angs)
 	}else{
 		
 	}

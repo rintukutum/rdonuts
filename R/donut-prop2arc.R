@@ -24,6 +24,7 @@ prop2ang <- function(prop){
 		names(angs_arc) <- names(prop)
 		return(angs_arc)
 	}else{
+		order_ <- names(prop)
 		#----
 		# sort before split
 		prop <- sort(round(
@@ -31,21 +32,16 @@ prop2ang <- function(prop){
 		digit = 4
 		))
 	
-		angs <- round(
-			seq(
+		angs <- seq(
 				0,
 				360,
 				length.out = 360
-				),
-			digit = 2
 			)
-		props <- round(
-			seq(
+		props <-seq(
 				0,
 				1,
-				length.out = 360),
-			digit = 4
-			)
+				length.out = 360)
+
 		bins <- as.factor(
 			findInterval(
 				props,
@@ -56,7 +52,10 @@ prop2ang <- function(prop){
 		#----
 		# use the custom function to get only start and end
 		angs_arc <- get_angs_arc(bin_angs)
-		# names(angs_arc) <- names(prop)
+		names(angs_arc) <- names(prop)
+		#----
+		# re-order into original order
+		angs_arc <- angs_arc[order_]
 		return(angs_arc)	
 	}
 }
