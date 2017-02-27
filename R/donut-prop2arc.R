@@ -45,7 +45,7 @@ prop2ang <- function(prop){
 		bins <- as.factor(
 			findInterval(
 				props,
-				as.numeric(prop)
+				prop
 			)
 		)
 		bin_angs <- split(angs, bins)
