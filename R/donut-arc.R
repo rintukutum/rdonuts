@@ -52,7 +52,7 @@ draw_arc <- function(
 			rev(strokeArea$y),
 			fillArea$y[1]
 			),
-		border = NA,
+		border = 'white',
 		col = stroke
 	)
 	#-------
