@@ -42,13 +42,12 @@ prop2ang <- function(prop){
 				1,
 				length.out = 360)
 
-		bins <- as.factor(
-			findInterval(
+		bins <- findInterval(
 				props,
-				prop
+				cumsum(prop)
 			)
-		)
-		bin_angs <- split(angs, bins)
+		bins[360] <- bins[359]
+		bin_angs <- split(angs, as.factor(bins))
 		#----
 		# use the custom function to get only start and end
 		angs_arc <- get_angs_arc(bin_angs)
@@ -56,6 +55,6 @@ prop2ang <- function(prop){
 		#----
 		# re-order into original order
 		angs_arc <- angs_arc[order_]
-		return(angs_arc)	
+		return(angs_arc)
 	}
 }

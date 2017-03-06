@@ -37,16 +37,17 @@ get_xy_coord <- function(
 # this works for 2 and 3
 # but not for more than 3
 get_angs_arc <- function(bin_angs){
-	len_bins <- length(bin_angs) - 1
+	len_bins <- length(bin_angs)
 	angs_arc <- list()
 	for(i in 1:len_bins){
 		s.ang <- bin_angs[[i]][1]
-		e.ang <- bin_angs[[i+1]][1]
 		if(i == len_bins){
 			# last bin
-			x_angs <- bin_angs[[len_bins+1]]
+			x_angs <- bin_angs[[len_bins]]
 			len.bin_ang <- length(x_angs)
 			e.ang <- x_angs[len.bin_ang]
+		}else{
+			e.ang <- bin_angs[[i+1]][1]	
 		}
 		angs_arc[[i]] <- c(
 			s.ang = s.ang,
