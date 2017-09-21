@@ -44,7 +44,7 @@ donut <- function(
 			seq(1,20,length.out=10),
 			type='n',
 			asp=asp)
-		points(10,10,pch=21,cex=5,col='red')
+		# points(10,10,pch=21,cex=5,col='red')
 		#----
 		cols <- RColorBrewer::brewer.pal(12,'Paired')
 		for(i in 1:length(angs)){
