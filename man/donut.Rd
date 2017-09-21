@@ -4,17 +4,15 @@
 \alias{donut}
 \title{data-driven donuts}
 \usage{
-donut(.data, .var, delay = 0)
+donut(.data, .var, delay = 0, asp = 1)
 }
 \description{
 data-driven donuts
 }
 \examples{
 set.seed(1004)
-.data <- data.frame(
-				G1 = sample(LETTERS[1:5],100,TRUE),
-			G2 = sample(LETTERS[1:3],100,TRUE)
-		)
+.data <- data.frame(G1 = sample(LETTERS[1:5],100,TRUE),
+G2 = sample(LETTERS[1:3],100,TRUE))
 .var <- colnames(.data)[1]
 donut(.data, .var)
 }

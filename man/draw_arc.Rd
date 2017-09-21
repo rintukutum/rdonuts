@@ -4,8 +4,8 @@
 \alias{draw_arc}
 \title{Draw arc without padding}
 \usage{
-draw_arc(x, y, s.ang, e.ang, stroke = "skyblue", width = 15, height = 15,
-  stroke.size = 8, stroke.position = "out")
+draw_arc(x, y, s.ang, e.ang, stroke = "skyblue", width = 5, height = 5,
+  stroke.size = 4, stroke.position = "out")
 }
 \description{
 Need to add padding

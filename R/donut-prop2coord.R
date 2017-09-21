@@ -11,7 +11,8 @@ prop2coord <- function(
 	plot(
 			10:-10,
 			10:-10,
-			type='n')
+			type='n',
+			asp = 1)
 	innerRadius <- scale_par(radius)
 	innerCoord <- get_xy_coord(
 		x = x,
@@ -40,6 +41,8 @@ prop2coord <- function(
 		cum_prop,
 
 		)
+	# remove the additional value
+	# and add previous to it
 	xi[361] <- xi[360]
 	donut_coord <- data.frame(
 		xi = xi,

@@ -8,11 +8,20 @@ draw_arc <- function(
 	s.ang,
 	e.ang,
 	stroke = 'skyblue', # stroke color
-	width = 15, # width
-	height = 15, # height
-	stroke.size = 8,
+	width = 5, # width
+	height = 5, # height
+	stroke.size = 4,
 	stroke.position = 'out' # 'in' = inside, mid = 'middle', out = 'outside'
 ){
+	#-------
+	# testing
+	#plot(
+	#		10:-10,
+	#		10:-10,
+	#		type='n',
+	#		asp = 1)
+	#--------
+	# passs :)
 	#----
 	# re-scale according to device size
 	r_x <- scale_par(width*0.1)$x

@@ -1,10 +1,8 @@
 #' data-driven donuts
-#' @examples 
+#' @examples
 #' set.seed(1004)
-#' .data <- data.frame(
-#' 				G1 = sample(LETTERS[1:5],100,TRUE),
-#'				G2 = sample(LETTERS[1:3],100,TRUE)
-#'			)
+#' .data <- data.frame(G1 = sample(LETTERS[1:5],100,TRUE),
+#' G2 = sample(LETTERS[1:3],100,TRUE))
 #' .var <- colnames(.data)[1]
 #' donut(.data, .var)
 #' @export
@@ -12,7 +10,8 @@
 donut <- function(
 	.data,
 	.var,
-	delay=0
+	delay=0,
+	asp=1
 	){
 	#-------
 	# data check
@@ -39,15 +38,19 @@ donut <- function(
 	if(length(.var) == 1){
 		prop <- get_prop(.data)
 		angs <- prop2ang(prop)
+		#-------
 		plot(
-			10:-10,
-			10:-10,
-			type='n')
+			seq(1,10),
+			seq(1,20,length.out=10),
+			type='n',
+			asp=asp)
+		points(10,10,pch=21,cex=5,col='red')
+		#----
 		cols <- RColorBrewer::brewer.pal(12,'Paired')
 		for(i in 1:length(angs)){
 			draw_arc(
-					x = 1,
-					y = 1,
+					x = 5,
+					y = 10,
 					s.ang = angs[[i]][1],
 					e.ang = angs[[i]][2],
 					stroke = sample(cols,1)
